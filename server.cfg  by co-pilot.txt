@@ -1,0 +1,71 @@
+#############################################
+# CS2D Dedicated Server Configuration
+# server.cfg
+# https://www.cs2d.com/help.php?cat=server
+#############################################
+
+# --- Basic Server Info ---
+sv_name "My CS2D Server"
+sv_password ""                # Leave empty for public server
+
+sv_maxplayers 16
+sv_gamemode 0                 # 0=Standard, 1=deathmatch, 2=Team Deathmatch, 3=construction, 4=Zombie
+
+# --- Networking ---
+sv_lan 1
+sv_usgnonly 0                 # 1 = Only USGN users can join
+
+# --- RCon (Remote Console) ---
+rcon_password "changeme123"
+
+
+# --- Map Settings ---
+mp_autogamemode 1 #When enabled (1) this function will automatically switch to the best game-mode when loading a map.
+
+# --- Gameplay Rules ---
+mp_freezetime 3
+mp_roundtime 3
+mp_buytime 0.5
+mp_startmoney 800
+mp_maxmoney 16000
+mp_autoteambalance 1
+mp_antispeeder 1
+mp_idlekick 1
+mp_idlekicktime 90
+mp_respawndelay 3
+mp_respawn 0                 # 0 = no respawn (classic), 1 = respawn
+
+# --- Friendly Fire ---
+mp_friendlyfire 0
+mp_friendlyfire_penalty 0
+
+# --- Voting ---
+mp_vote 1
+mp_votetime 20
+mp_votekick 1
+mp_voteban 1
+
+# --- Anti-Cheat / Security ---
+sv_fow 1                     # Fog of war
+sv_specmode 1                # Spectator mode
+sv_recoil 1
+sv_gamemodevote 0
+sv_sounddistance 1
+sv_lagcompensation 1
+
+# --- Performance ---
+sv_fps 60
+sv_maxrate 1024
+sv_timeout 15
+
+# --- Logging ---
+log 1
+logfile "logs/server.log"
+
+# --- Messages ---
+sv_motd "Welcome to the server!"
+sv_motdurl ""
+
+#############################################
+# End of server.cfg
+#############################################

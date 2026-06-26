@@ -1,3 +1,35 @@
 NO FEEDBACK ON CONSOLE IS NORMAL HAVE TO USE RCON LIKE HLSW
 
 If co-pilot says there is a web interface, don't believe it
+
+
+2d_dedicated -name NAMESERV -port 1337 -rcon passwd
+
+
+mp_autogamemode 1  automatically switch gamemode?
+
+0- standard
+1- DM
+2- TDM
+3- CONSTRUCTION
+4- zombie
+
+
+Standard Mode (0)
+./cs2d_dedicated +sv_gamemode 0 +map de_dust
+
+
+Construction Mode (1)
+./cs2d_dedicated +sv_gamemode 3 +map cs_assault
+
+
+Zombie Mode (2)
+./cs2d_dedicated +sv_gamemode 4 +map zm_cross
+
+
+Team Deathmatch (3)
+./cs2d_dedicated +sv_gamemode 2 +map de_dust2
+
+
+Deathmatch / Free-for-All (4)
+./cs2d_dedicated +sv_gamemode 1 +map aim_ak-colt

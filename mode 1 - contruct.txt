@@ -1,0 +1,7 @@
+ctf_dust
+ctf_cs2d
+ctf_lost
+ctf_mini
+con_city
+con_town
+con_complex

@@ -1,0 +1,6 @@
+zm_cross
+zm_city
+zm_fortress
+zm_laboratory
+zm_jungle
+zm_iceworld

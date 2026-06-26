@@ -1,0 +1,67 @@
+https://legionhosting.net/kb/cs2d/cs2d-server-admin-guide
+
+1. RCON Access
+
+Set an RCON password in sys/server.cfg to enable remote administration:
+
+sv_rcon your_rcon_password
+
+To use RCON in-game, open the console and type:
+
+rcon your_rcon_password [command]
+
+You can also execute commands directly from the GPanel Console tab.
+2. Admin Commands
+Command 	Description
+kick [id] [reason] 	Kick a player by their ID.
+ban [id] [duration] [reason] 	Ban a player. Duration in minutes (0 = permanent).
+unban [usgn/ip] 	Unban a player by USGN or IP.
+listplayers 	Show all connected players with IDs.
+changemap [map] 	Change to a different map.
+restartround 	Restart the current round.
+say [message] 	Broadcast a server message.
+setname [id] [name] 	Force-rename a player.
+slap [id] [damage] 	Slap a player (deals damage).
+kill [id] 	Kill a player.
+setmoney [id] [amount] 	Set a player's money.
+3. Game Modes
+
+Set the game mode in sys/server.cfg with sv_gamemode:
+Value 	Mode 	Description
+0 	Standard 	Classic Counter-Strike (bomb defusal, hostage rescue).
+1 	Deathmatch 	Free-for-all, every player for themselves.
+2 	Team Deathmatch 	Team-based deathmatch.
+3 	Capture the Flag 	Capture the enemy team's flag.
+4 	Domination 	Control capture points on the map.
+4. Map Rotation
+
+Create or edit sys/mapcycle.txt with one map name per line:
+
+de_dust
+de_dust2
+cs_assault
+de_aztec
+cs_italy
+
+The server cycles through these maps in order after each round.
+5. Lua Scripting
+
+CS2D supports Lua scripts for custom functionality. Place scripts in the sys/lua/ directory and load them in sys/server.cfg:
+
+lua "lua/myscript.lua"
+
+Lua scripts can add custom admin commands, game modes, and server-side logic. See the CS2D documentation for the full Lua API.
+6. Ban Management
+
+Bans are stored in sys/bans.cfg. You can manage them via commands or by editing the file directly:
+
+    USGN bans persist across name changes since they are tied to the player's account.
+    IP bans block a specific IP address.
+    To clear all bans, delete the contents of sys/bans.cfg and restart.
+
+7. Troubleshooting
+
+    Server not starting: Check GPanel console for errors. Ensure no syntax errors in sys/server.cfg.
+    RCON not working: Verify the RCON password is set and entered correctly.
+    Map not found: Ensure the map file exists in the maps/ directory. Custom maps need to be uploaded via SFTP.
+    Lua script errors: Check the console for Lua error messages. Remove or fix the script to restore server stability.
